@@ -2,7 +2,7 @@ package org.ethan.peer.callbacks;
 
 public class HttpRequests {
     private static boolean printHeaders = false;
-    private static boolean printRequests = false;
+    private static boolean printRequests = true;
     private static String authKey;
     public static void printPost(String s) {
         if(printRequests)

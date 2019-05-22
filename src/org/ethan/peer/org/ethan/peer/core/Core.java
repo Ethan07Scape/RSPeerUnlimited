@@ -1,7 +1,7 @@
 package org.ethan.peer.org.ethan.peer.core;
 
 import org.ethan.peer.callbacks.HttpRequests;
-import org.ethan.peer.classloader.ClassArchive;
+import org.ethan.peer.archive.ClassArchive;
 import org.ethan.peer.handlers.RequestAccountInfo;
 import org.ethan.peer.handlers.SDNScriptDownload;
 import org.ethan.peer.handlers.SDNScriptList;
@@ -47,6 +47,7 @@ public class Core {
         System.out.println(new RequestAccountInfo().getAccountInfo());
         if(ripScripts) {
             //ripScriptList();
+            new SDNScriptList().printScriptList();
             new SDNScriptDownload(1128, "bHideTanner", outputDir);
         }
 

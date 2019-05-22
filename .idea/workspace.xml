@@ -7,24 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0dae3f1c-0567-4a70-a4ef-8eaf8487dc96" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/org/ethan/peer/injection/injectors/InstanceBypass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RSPeerUnlimited/org/ethan/peer/callbacks/HttpRequests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSPeerUnlimited/org/ethan/peer/callbacks/HttpRequests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RSPeerUnlimited/org/ethan/peer/handlers/RequestAccountInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSPeerUnlimited/org/ethan/peer/handlers/RequestAccountInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RSPeerUnlimited/org/ethan/peer/handlers/SDNScriptList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSPeerUnlimited/org/ethan/peer/handlers/SDNScriptList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RSPeerUnlimited/org/ethan/peer/org/ethan/peer/core/Core.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSPeerUnlimited/org/ethan/peer/org/ethan/peer/core/Core.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RSPeerUnlimited/org/ethan/peer/util/GetRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSPeerUnlimited/org/ethan/peer/util/GetRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ethan/peer/archive/ClassArchive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ethan/peer/archive/ClassArchive.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ethan/peer/callbacks/HttpRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ethan/peer/callbacks/HttpRequests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ethan/peer/handlers/RequestAccountInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ethan/peer/handlers/RequestAccountInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ethan/peer/handlers/SDNScriptDownload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ethan/peer/handlers/SDNScriptDownload.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ethan/peer/handlers/SDNScriptList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ethan/peer/handlers/SDNScriptList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ethan/peer/injection/injectors/GetHeaders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ethan/peer/injection/injectors/GetHeaders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ethan/peer/injection/injectors/PostRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ethan/peer/injection/injectors/PostRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ethan/peer/org/ethan/peer/core/Core.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ethan/peer/org/ethan/peer/core/Core.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ethan/peer/util/GetRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ethan/peer/util/GetRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ethan/peer/util/PostRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ethan/peer/util/PostRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ethan/peer/util/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ethan/peer/util/Utilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSPeerUnlimited/org/ethan/peer/archive/ClassArchive.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSPeerUnlimited/org/ethan/peer/archive/ClassArchive.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSPeerUnlimited/org/ethan/peer/handlers/SDNScriptDownload.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSPeerUnlimited/org/ethan/peer/handlers/SDNScriptDownload.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSPeerUnlimited/org/ethan/peer/injection/injectors/PostRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSPeerUnlimited/org/ethan/peer/injection/injectors/PostRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSPeerUnlimited/org/ethan/peer/util/PostRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSPeerUnlimited/org/ethan/peer/util/PostRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/ethan/peer/org/ethan/peer/core/Core.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,16 +26,18 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/org/ethan/peer/org/ethan/peer/core/Core.java">
+        <entry file="file://$PROJECT_DIR$/src/org/ethan/peer/core/Core.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="47">
-              <caret line="30" column="103" selection-start-line="30" selection-start-column="103" selection-end-line="30" selection-end-column="103" />
+            <state relative-caret-position="310">
+              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2077#2078#0" expanded="true" />
-                <element signature="e#2103#2104#0" expanded="true" />
-                <element signature="e#3550#3551#0" expanded="true" />
-                <element signature="e#3648#3649#0" expanded="true" />
+                <element signature="e#2172#2173#0" expanded="true" />
+                <element signature="e#2198#2199#0" expanded="true" />
+                <element signature="e#3485#3486#0" expanded="true" />
+                <element signature="e#3535#3536#0" expanded="true" />
+                <element signature="e#3573#3574#0" expanded="true" />
+                <element signature="e#3633#3634#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -78,15 +67,6 @@
                 <element signature="e#1235#1236#0" expanded="true" />
                 <element signature="e#1283#1284#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/ethan/peer/injection/Injector.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -231,6 +211,7 @@
         <option value="$PROJECT_DIR$/src/org/ethan/peer/handlers/RequestAccountInfo.java" />
         <option value="$PROJECT_DIR$/src/org/ethan/peer/injection/injectors/InstanceBypass.java" />
         <option value="$PROJECT_DIR$/src/org/ethan/peer/org/ethan/peer/core/Core.java" />
+        <option value="$PROJECT_DIR$/src/org/ethan/peer/core/Core.java" />
       </list>
     </option>
   </component>
@@ -268,43 +249,7 @@
               <item name="RSPeerUnlimited" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="peer" type="462c0819:PsiDirectoryNode" />
-              <item name="callbacks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RSPeerUnlimited" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RSPeerUnlimited" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="peer" type="462c0819:PsiDirectoryNode" />
-              <item name="handlers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RSPeerUnlimited" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RSPeerUnlimited" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="peer" type="462c0819:PsiDirectoryNode" />
-              <item name="injection" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RSPeerUnlimited" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RSPeerUnlimited" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="peer" type="462c0819:PsiDirectoryNode" />
-              <item name="injection" type="462c0819:PsiDirectoryNode" />
-              <item name="injectors" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RSPeerUnlimited" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RSPeerUnlimited" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="peer" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RSPeerUnlimited" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RSPeerUnlimited" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="peer" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -345,7 +290,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Core (1)">
+    <configuration name="Core (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.ethan.peer.core.Core" />
+      <module name="RSPeerUnlimited" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Core" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.ethan.peer.org.ethan.peer.core.Core" />
       <module name="RSPeerUnlimited" />
@@ -354,8 +306,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Core" />
+      <item itemvalue="Application.Core (1)" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Core (1)" />
         <item itemvalue="Application.Core" />
       </list>
     </recent_temporary>
@@ -371,6 +328,14 @@
       <option name="presentableId" value="Default" />
       <updated>1558484468378</updated>
     </task>
+    <task id="LOCAL-00001" summary="Client load limit / instance bypass">
+      <created>1558518187492</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1558518187492</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -400,6 +365,10 @@
       <window_info anchor="right" id="Maven" order="4" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
     </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Client load limit / instance bypass" />
+    <option name="LAST_COMMIT_MESSAGE" value="Client load limit / instance bypass" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/org/ethan/peer/classloader/C.java" />
@@ -578,14 +547,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/ethan/peer/org/ethan/peer/core/Core.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="30" column="103" selection-start-line="30" selection-start-column="103" selection-end-line="30" selection-end-column="103" />
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="108" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2077#2078#0" expanded="true" />
             <element signature="e#2103#2104#0" expanded="true" />
             <element signature="e#3550#3551#0" expanded="true" />
             <element signature="e#3648#3649#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/ethan/peer/core/Core.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2172#2173#0" expanded="true" />
+            <element signature="e#2198#2199#0" expanded="true" />
+            <element signature="e#3485#3486#0" expanded="true" />
+            <element signature="e#3535#3536#0" expanded="true" />
+            <element signature="e#3573#3574#0" expanded="true" />
+            <element signature="e#3633#3634#0" expanded="true" />
           </folding>
         </state>
       </provider>

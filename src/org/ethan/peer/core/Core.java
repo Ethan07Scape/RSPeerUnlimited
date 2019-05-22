@@ -1,4 +1,4 @@
-package org.ethan.peer.org.ethan.peer.core;
+package org.ethan.peer.core;
 
 import org.ethan.peer.archive.ClassArchive;
 import org.ethan.peer.callbacks.HttpRequests;

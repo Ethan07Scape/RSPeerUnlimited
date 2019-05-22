@@ -14,9 +14,23 @@ public class GetRequest {
     public InputStream getRawBody(Object instance) {
         try {
             Class<?> uni = Class.forName("com.mashape.unirest.http.HttpResponse");
-            for(Method m : uni.getDeclaredMethods()) {
-                if(m.getName().equals("getRawBody")) {
+            for (Method m : uni.getDeclaredMethods()) {
+                if (m.getName().equals("getRawBody")) {
                     return (InputStream) m.invoke(instance);
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public Object getBody(Object instance) {
+        try {
+            Class<?> uni = Class.forName("com.mashape.unirest.http.HttpResponse");
+            for (Method m : uni.getDeclaredMethods()) {
+                if (m.getName().equals("getBody")) {
+                    return m.invoke(instance);
                 }
             }
         } catch (Exception e) {
@@ -28,8 +42,8 @@ public class GetRequest {
     public int getStatus(Object instance) {
         try {
             Class<?> uni = Class.forName("com.mashape.unirest.http.HttpResponse");
-            for(Method m : uni.getDeclaredMethods()) {
-                if(m.getName().equals("getStatus")) {
+            for (Method m : uni.getDeclaredMethods()) {
+                if (m.getName().equals("getStatus")) {
                     return (int) m.invoke(instance);
                 }
             }
@@ -43,8 +57,8 @@ public class GetRequest {
     public Object getHttpResponse(String link) {
         try {
             Class<?> uni = Class.forName("com.mashape.unirest.http.Unirest");
-            for(Method m : uni.getDeclaredMethods()) {
-                if(m.getName().equals("get")) {
+            for (Method m : uni.getDeclaredMethods()) {
+                if (m.getName().equals("get")) {
                     return m.invoke(null, link);
                 }
             }
@@ -69,6 +83,7 @@ public class GetRequest {
         }
         return null;
     }
+
     public Object header(String key, String data) {
         try {
             Class<?> uni = Class.forName("com.mashape.unirest.request.GetRequest");

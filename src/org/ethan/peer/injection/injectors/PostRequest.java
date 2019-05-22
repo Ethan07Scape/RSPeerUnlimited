@@ -6,7 +6,6 @@ import org.ethan.peer.injection.Injector;
 import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.tree.*;
 
-
 import java.util.ListIterator;
 
 public class PostRequest implements Injector {
@@ -24,7 +23,7 @@ public class PostRequest implements Injector {
             MethodNode mn = mnIt.next();
             if (mn.name.equals("post")) {
                 injectPost(mn);
-            } else if(mn.name.equals("get")) {
+            } else if (mn.name.equals("get")) {
                 injectGet(mn);
             }
         }
@@ -32,30 +31,31 @@ public class PostRequest implements Injector {
 
     @SuppressWarnings("deprecation")
     private void injectPost(MethodNode mn) {
-            InsnList nl = new InsnList();
-            boolean added = false;
-            AbstractInsnNode[] mnNodes = mn.instructions.toArray();
-            for (AbstractInsnNode abstractInsnNode : mnNodes) {
-                if(!added) {
-                    nl.add(new VarInsnNode(Opcodes.ALOAD, 0));
-                    nl.add(new MethodInsnNode(Opcodes.INVOKESTATIC, HttpRequests.class.getCanonicalName().replace('.', '/'), "printPost", "(" + "Ljava/lang/String;" + ")V"));
-                    System.out.println("Injecting inside post request.");
-                    added = true;
-                }
-                nl.add(abstractInsnNode);
+        InsnList nl = new InsnList();
+        boolean added = false;
+        AbstractInsnNode[] mnNodes = mn.instructions.toArray();
+        for (AbstractInsnNode abstractInsnNode : mnNodes) {
+            if (!added) {
+                nl.add(new VarInsnNode(Opcodes.ALOAD, 0));
+                nl.add(new MethodInsnNode(Opcodes.INVOKESTATIC, HttpRequests.class.getCanonicalName().replace('.', '/'), "printPost", "(" + "Ljava/lang/String;" + ")V"));
+                System.out.println("Injecting inside post request.");
+                added = true;
             }
-
-            mn.instructions = nl;
-            mn.visitMaxs(0, 0);
-            mn.visitEnd();
+            nl.add(abstractInsnNode);
         }
+
+        mn.instructions = nl;
+        mn.visitMaxs(0, 0);
+        mn.visitEnd();
+    }
+
     @SuppressWarnings("deprecation")
     private void injectGet(MethodNode mn) {
         InsnList nl = new InsnList();
         boolean added = false;
         AbstractInsnNode[] mnNodes = mn.instructions.toArray();
         for (AbstractInsnNode abstractInsnNode : mnNodes) {
-            if(!added) {
+            if (!added) {
                 nl.add(new VarInsnNode(Opcodes.ALOAD, 0));
                 nl.add(new MethodInsnNode(Opcodes.INVOKESTATIC, HttpRequests.class.getCanonicalName().replace('.', '/'), "printGet", "(" + "Ljava/lang/String;" + ")V"));
                 System.out.println("Injecting inside get request.");

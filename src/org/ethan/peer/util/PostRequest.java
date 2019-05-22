@@ -14,8 +14,8 @@ public class PostRequest {
     public InputStream getRawBody(Object instance) {
         try {
             Class<?> uni = Class.forName("com.mashape.unirest.http.HttpResponse");
-            for(Method m : uni.getDeclaredMethods()) {
-                if(m.getName().equals("getRawBody")) {
+            for (Method m : uni.getDeclaredMethods()) {
+                if (m.getName().equals("getRawBody")) {
                     return (InputStream) m.invoke(instance);
                 }
             }
@@ -24,11 +24,12 @@ public class PostRequest {
         }
         return null;
     }
+
     public Object getBody(Object instance) {
         try {
             Class<?> uni = Class.forName("com.mashape.unirest.http.HttpResponse");
-            for(Method m : uni.getDeclaredMethods()) {
-                if(m.getName().equals("getBody")) {
+            for (Method m : uni.getDeclaredMethods()) {
+                if (m.getName().equals("getBody")) {
                     return m.invoke(instance);
                 }
             }
@@ -37,11 +38,12 @@ public class PostRequest {
         }
         return null;
     }
+
     public int getStatus(Object instance) {
         try {
             Class<?> uni = Class.forName("com.mashape.unirest.http.HttpResponse");
-            for(Method m : uni.getDeclaredMethods()) {
-                if(m.getName().equals("getStatus")) {
+            for (Method m : uni.getDeclaredMethods()) {
+                if (m.getName().equals("getStatus")) {
                     return (int) m.invoke(instance);
                 }
             }
@@ -55,8 +57,8 @@ public class PostRequest {
     public Object getHttpResponse(String link) {
         try {
             Class<?> uni = Class.forName("com.mashape.unirest.http.Unirest");
-            for(Method m : uni.getDeclaredMethods()) {
-                if(m.getName().equals("post")) {
+            for (Method m : uni.getDeclaredMethods()) {
+                if (m.getName().equals("post")) {
                     return m.invoke(null, link);
                 }
             }

@@ -1,12 +1,13 @@
 package org.ethan.peer.org.ethan.peer.core;
 
-import org.ethan.peer.callbacks.HttpRequests;
 import org.ethan.peer.archive.ClassArchive;
+import org.ethan.peer.callbacks.HttpRequests;
 import org.ethan.peer.handlers.RequestAccountInfo;
 import org.ethan.peer.handlers.SDNScriptDownload;
 import org.ethan.peer.handlers.SDNScriptList;
 import org.ethan.peer.injection.Injector;
 import org.ethan.peer.injection.injectors.GetHeaders;
+import org.ethan.peer.injection.injectors.InstanceBypass;
 import org.ethan.peer.injection.injectors.PostRequest;
 import org.ethan.peer.util.Utilities;
 
@@ -21,20 +22,19 @@ import java.util.Map;
 public class Core {
     /**
      * Currently disabled automatic script dumping due to rate limiting on server-side.
-     *
+     * <p>
      * You need to own the script/have added to SDN to be able to dump.
-     *
+     * <p>
      * Make sure you've logged into the RSPeer client it-least once, so it can grab the auth-key for dumping.
-     *
+     * <p>
      * TODO: add filter for owned scripts vs all scripts to avoid rate limiter
-     * TODO: add instance bypass to support multiple clients/instances of scripts.
-     *
+     * TODO: add instance bypass to support multiple clients/instances of scripts. - Should be finished
      */
     private final ClassArchive classArchive;
     private final File rsPeerJar = new File("C:\\Users\\itset\\.rspeer\\1.77.jar");
     private final String outputDir = "C:\\Users\\itset\\Desktop\\Parabot Scripting\\Outputs";
     private final File outputPeer = new File(outputDir + File.separator + "rspeer.jar");
-    private boolean ripScripts = true;
+    private boolean ripScripts = false;
     private Map<Integer, String> scriptList = null;
 
     public Core() {
@@ -42,10 +42,9 @@ public class Core {
         this.classArchive = new ClassArchive(this.rsPeerJar, getInjectables());
         dumpInjectedPeer();
         addInjectedPeer();
-
         runClient();
         System.out.println(new RequestAccountInfo().getAccountInfo());
-        if(ripScripts) {
+        if (ripScripts) {
             //ripScriptList();
             new SDNScriptList().printScriptList();
             new SDNScriptDownload(1128, "bHideTanner", outputDir);
@@ -76,11 +75,12 @@ public class Core {
         List<Injector> injectors = new ArrayList<>();
         injectors.add(new PostRequest());
         injectors.add(new GetHeaders());
-
+        injectors.add(new InstanceBypass());
         return injectors;
     }
+
     private void ripScriptList() {
-        while(HttpRequests.getAuthKey() == null) {
+        while (HttpRequests.getAuthKey() == null) {
             sleep();
         }
         scriptList = new SDNScriptList().getScriptList();
@@ -89,9 +89,11 @@ public class Core {
                 sleepForScriptRip();
             }*/
     }
+
     private void dumpInjectedPeer() {
         this.classArchive.dump(outputPeer);
     }
+
     private void addInjectedPeer() {
         Utilities.addToSystemClassLoader(outputPeer);
     }

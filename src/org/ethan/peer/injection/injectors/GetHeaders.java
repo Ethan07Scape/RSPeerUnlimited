@@ -1,10 +1,10 @@
 package org.ethan.peer.injection.injectors;
 
 
-import org.objectweb.asm.Opcodes;
-import org.objectweb.asm.tree.*;
 import org.ethan.peer.callbacks.HttpRequests;
 import org.ethan.peer.injection.Injector;
+import org.objectweb.asm.Opcodes;
+import org.objectweb.asm.tree.*;
 
 import java.util.ListIterator;
 
@@ -22,7 +22,7 @@ public class GetHeaders implements Injector {
         while (mnIt.hasNext()) {
             MethodNode mn = mnIt.next();
             if (mn.name.equals("header")) {
-                    inject(mn);
+                inject(mn);
 
             }
         }
@@ -34,7 +34,7 @@ public class GetHeaders implements Injector {
         boolean added = false;
         AbstractInsnNode[] mnNodes = mn.instructions.toArray();
         for (AbstractInsnNode abstractInsnNode : mnNodes) {
-            if(!added) {
+            if (!added) {
                 nl.add(new VarInsnNode(Opcodes.ALOAD, 1));
                 nl.add(new MethodInsnNode(Opcodes.INVOKESTATIC, HttpRequests.class.getCanonicalName().replace('.', '/'), "printHeader", "(" + "Ljava/lang/String;" + ")V"));
                 nl.add(new VarInsnNode(jdk.internal.org.objectweb.asm.Opcodes.ALOAD, 2));

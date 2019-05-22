@@ -12,10 +12,9 @@ public class RequestAccountInfo {
         Object postRequest = http.header("Authorization", HttpRequests.getAuthKey());
         Object response = http.asString(postRequest);
         int status = http.getStatus(response);
-        System.out.println("Status: "+status);
+        System.out.println("Status: " + status);
         String body = (String) http.getBody(response);
 
         return body;
     }
-
 }

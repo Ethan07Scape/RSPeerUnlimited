@@ -1,10 +1,9 @@
 package org.ethan.peer.archive;
 
+import org.ethan.peer.injection.Injector;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassWriter;
-import org.objectweb.asm.tree.*;
-import org.ethan.peer.injection.Injector;
-
+import org.objectweb.asm.tree.ClassNode;
 
 import java.io.*;
 import java.net.MalformedURLException;

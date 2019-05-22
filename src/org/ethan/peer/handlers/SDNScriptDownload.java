@@ -12,11 +12,11 @@ import java.util.zip.ZipEntry;
 
 public class SDNScriptDownload {
 
-    private HashMap<String, byte[]> classBytes = new HashMap<>();
-    private HashMap<String, byte[]> resourceBytes = new HashMap<>();
     private final int scriptID;
     private final String scriptName;
     private final String outputDir;
+    private HashMap<String, byte[]> classBytes = new HashMap<>();
+    private HashMap<String, byte[]> resourceBytes = new HashMap<>();
 
 
     public SDNScriptDownload(int scriptID, String scriptName, String outputDir) {
@@ -28,11 +28,11 @@ public class SDNScriptDownload {
 
     private byte[] downloadSDNScript() {
         try {
-            GetRequest http = new GetRequest("https://services.rspeer.org/api/script/content?id="+scriptID);
+            GetRequest http = new GetRequest("https://services.rspeer.org/api/script/content?id=" + scriptID);
             Object getRequest = http.header("Authorization", HttpRequests.getAuthKey());
             Object response = http.getAsBinary(getRequest);
             int status = http.getStatus(response);
-            System.out.println("Response status: "+status);
+            System.out.println("Response status: " + status);
             if (status == 200) {
                 final InputStream inputStream = http.getRawBody(response);
                 final DataInputStream dataInputStream = new DataInputStream(inputStream);
@@ -53,13 +53,14 @@ public class SDNScriptDownload {
         }
         return null;
     }
+
     private synchronized Object dumpSDNScript() {
         try {
             byte[] bytes = downloadSDNScript();
             if (bytes != null && bytes.length > 0) {
                 System.out.println("Byte Length: " + bytes.length);
             } else {
-                System.out.println("Please add script to ScriptSelector: "+scriptName);
+                System.out.println("Please add script to ScriptSelector: " + scriptName);
                 return null;
             }
             final byte[] array = new byte[1024];
@@ -80,7 +81,7 @@ public class SDNScriptDownload {
                     resourceBytes.put(nextEntry.getName(), byteArrayOutputStream.toByteArray());
                 }
             }
-            System.out.println("Dumping script: "+scriptName);
+            System.out.println("Dumping script: " + scriptName);
             Utilities.dumpJar(new File(outputDir + File.separator + scriptName + ".jar"), classBytes, resourceBytes);
         } catch (Exception e) {
             e.printStackTrace();
